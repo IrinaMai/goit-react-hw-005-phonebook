@@ -53,7 +53,7 @@ export default class App extends Component {
         <h2>Phonebook</h2>
         <AddContact onHandleSubmit={this.onHandleSubmit} />
         <h2>Contacts</h2>
-        {this.filterContact().length > 2 && <FilterContacts handleFilter={this.handleFilter}/>}
+        {this.state.contacts.length > 2 && <FilterContacts handleFilter={this.handleFilter}/>}
         <Contacts list={this.filterContact()} deleteContactById={this.deleteContactById}/>
     </Div>
   )
